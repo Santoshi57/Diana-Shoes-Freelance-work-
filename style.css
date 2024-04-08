@@ -104,6 +104,46 @@ header .icons a:hover{
   cursor: pointer;
   display: none;
 }
+/* Hide the options by default */
+#products-options {
+  display: none;
+}
+
+/* Styling for dropdown links */
+.navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* Styling for dropdown options */
+#products-options {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#products-options li {
+  list-style-type: none;
+}
+
+#products-options li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+#products-options li a:hover {
+  background-color: #f0f0f0;
+}
+
 
 .home{
   padding:0;
@@ -269,9 +309,8 @@ header .icons a:hover{
   color:#666;
   padding:1rem 0;
 }
-.items ul { 
-  display: none; 
-}
+
+
 .products .box-container{
   display: flex;
   flex-wrap: wrap;

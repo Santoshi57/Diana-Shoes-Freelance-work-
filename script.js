@@ -54,3 +54,24 @@ function openPopup() {
 function showAlert() {
     alert('Please enter your email here!!!');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const productsLink = document.querySelector('.navbar a[href="#"]');
+  const productsOptions = document.getElementById('products-options');
+
+  productsLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (productsOptions.style.display === 'none') {
+          productsOptions.style.display = 'block';
+      } else {
+          productsOptions.style.display = 'none';
+      }
+  });
+
+  // Close the products options if user clicks outside the dropdown
+  document.addEventListener('click', function(event) {
+      if (!productsOptions.contains(event.target) && event.target !== productsLink) {
+          productsOptions.style.display = 'none';
+      }
+  });
+});
